@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "name": "choclate",
+      "id": "12",
+      "price": "12000"
+    },
+    {
+      "id": 17,
+      "name": "vannila",
+      "price": 6,
+      "active": true
+    },
+    {
+      "id": "18",
+      "name": "food",
+      "price": "123"
+    },
+    {
+      "id": 6,
+      "name": "kitkat",
+      "price": 10,
+      "active": false
+    },
+    {
+      "id": 7,
+      "name": "cadbary",
+      "price": 10,
+      "active": false
+    },
+    {
+      "id": "99",
+      "price": "22",
+      "name": "2"
+    }
+  ]
+}

@@ -31,7 +31,7 @@
             <input class="form-control" type="text" id="name" placeholder="name">
 
         <input class="form-control" type="text" id="price" placeholder="price">
-        <input class="form-control w-25" type="submit" value="send" >
+        <input class="form-control" type="submit" value="send" >
     </form>
 
         </div>
@@ -54,6 +54,8 @@
     </form>
     
 </div>
+              <h1 class="display-5">GET</h1>
+
 <div id="get">
 
 </div>
@@ -164,7 +166,7 @@
           let id = document.getElementById("id_update").value;
 
         let res = await fetch(`http://localhost:5000/api/products/${id}`,{
-            method:"PUT",
+            method:"PATCH",
             body:JSON.stringify(obj),
            headers:{
                 'Content-Type':'application/json'

@@ -1,0 +1,1329 @@
+
+C:\Users\Acer>mongoimport --db multimedia --collection movie --file D:/movie.json --jsonArray
+2021-11-25T10:09:47.127+0530    connected to: mongodb://localhost/
+2021-11-25T10:09:47.481+0530    1000 document(s) imported successfully. 0 document(s) failed to import.
+
+C:\Users\Acer>mongo
+MongoDB shell version v5.0.4
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("0e5b4527-a0bf-49b1-8c1b-169174187440") }
+MongoDB server version: 5.0.4
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-11-22T15:13:22.082+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin       0.000GB
+config      0.000GB
+local       0.000GB
+masai       0.000GB
+multimedia  0.000GB
+test        0.000GB
+> uses multimedia
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:5
+> use multimedia
+switched to db multimedia
+> show collecitons
+uncaught exception: Error: don't know how to show [collecitons] :
+shellHelper.show@src/mongo/shell/utils.js:1211:11
+shellHelper@src/mongo/shell/utils.js:838:15
+@(shellhelp2):1:1
+> show collection
+uncaught exception: Error: don't know how to show [collection] :
+shellHelper.show@src/mongo/shell/utils.js:1211:11
+shellHelper@src/mongo/shell/utils.js:838:15
+@(shellhelp2):1:1
+> show collections
+movie
+> db.movie.find()
+{ "_id" : ObjectId("619f13938530bf40b93c6807"), "id" : 3, "movie_name" : "Perfectly Normal", "movie_genre" : "Comedy", "production_year" : 1992, "budget" : 10428, "ip_address" : "184.201.155.154" }
+{ "_id" : ObjectId("619f13938530bf40b93c6808"), "id" : 6, "movie_name" : "Dark Matter", "movie_genre" : "Drama", "production_year" : 1998, "budget" : 17081, "ip_address" : "90.53.253.21" }
+{ "_id" : ObjectId("619f13938530bf40b93c6809"), "id" : 7, "movie_name" : "The Boogens", "movie_genre" : "Horror", "production_year" : 2017, "budget" : 15769, "ip_address" : "243.122.33.227" }
+{ "_id" : ObjectId("619f13938530bf40b93c680a"), "id" : 4, "movie_name" : "Last Chance", "movie_genre" : "Comedy", "production_year" : 1992, "budget" : 11296, "ip_address" : "20.71.99.133" }
+{ "_id" : ObjectId("619f13938530bf40b93c680b"), "id" : 9, "movie_name" : "Love Don't Cost a Thing", "movie_genre" : "Drama|Romance", "production_year" : 2009, "budget" : 12667, "ip_address" : "137.157.77.225" }
+{ "_id" : ObjectId("619f13938530bf40b93c680c"), "id" : 10, "movie_name" : "When Pigs Have Wings", "movie_genre" : "Comedy", "production_year" : 2020, "budget" : 12574, "ip_address" : "99.143.113.220" }
+{ "_id" : ObjectId("619f13938530bf40b93c680d"), "id" : 5, "movie_name" : "Trou, Le (Hole, The) (Night Watch, The)", "movie_genre" : "Crime|Film-Noir", "production_year" : 2001, "budget" : 16849, "ip_address" : "159.31.202.165" }
+{ "_id" : ObjectId("619f13938530bf40b93c680e"), "id" : 2, "movie_name" : "Survive Style 5+", "movie_genre" : "Fantasy|Mystery|Romance|Thriller", "production_year" : 2019, "budget" : 12062, "ip_address" : "110.226.175.205" }
+{ "_id" : ObjectId("619f13938530bf40b93c680f"), "id" : 8, "movie_name" : "Dead Awake", "movie_genre" : "Action|Thriller", "production_year" : 1998, "budget" : 10152, "ip_address" : "43.95.144.144" }
+{ "_id" : ObjectId("619f13938530bf40b93c6810"), "id" : 12, "movie_name" : "Mike's New Car", "movie_genre" : "Animation|Comedy", "production_year" : 2010, "budget" : 11904, "ip_address" : "20.177.71.122" }
+{ "_id" : ObjectId("619f13938530bf40b93c6811"), "id" : 14, "movie_name" : "Crawlspace", "movie_genre" : "Horror", "production_year" : 2004, "budget" : 9037, "ip_address" : "196.31.235.56" }
+{ "_id" : ObjectId("619f13938530bf40b93c6812"), "id" : 13, "movie_name" : "Lumihiutalemuodostelma", "movie_genre" : "Comedy|Drama", "production_year" : 1997, "budget" : 10455, "ip_address" : "191.22.235.175" }
+{ "_id" : ObjectId("619f13938530bf40b93c6813"), "id" : 17, "movie_name" : "Loser", "movie_genre" : "Comedy|Romance", "production_year" : 2019, "budget" : 15050, "ip_address" : "128.202.16.76" }
+{ "_id" : ObjectId("619f13938530bf40b93c6814"), "id" : 11, "movie_name" : "And Life Goes On (a.k.a. Life and Nothing More) (Zendegi va digar hich)", "movie_genre" : "Drama", "production_year" : 2009, "budget" : 17979, "ip_address" : "223.86.183.124" }
+{ "_id" : ObjectId("619f13938530bf40b93c6815"), "id" : 16, "movie_name" : "Killer of Sheep", "movie_genre" : "Drama", "production_year" : 1995, "budget" : 14363, "ip_address" : "164.121.100.208" }
+{ "_id" : ObjectId("619f13938530bf40b93c6816"), "id" : 19, "movie_name" : "Warrior, The", "movie_genre" : "Adventure|Drama", "production_year" : 2004, "budget" : 13227, "ip_address" : "10.65.205.132" }
+{ "_id" : ObjectId("619f13938530bf40b93c6817"), "id" : 15, "movie_name" : "Nibelungen: Kriemhild's Revenge, Die (Die Nibelungen: Kriemhilds Rache)", "movie_genre" : "Adventure|Drama|Fantasy", "production_year" : 1996, "budget" : 10896, "ip_address" : "175.249.222.192" }
+{ "_id" : ObjectId("619f13938530bf40b93c6818"), "id" : 23, "movie_name" : "Endless Love", "movie_genre" : "Drama|Romance", "production_year" : 1992, "budget" : 16139, "ip_address" : "204.233.82.158" }
+{ "_id" : ObjectId("619f13938530bf40b93c6819"), "id" : 18, "movie_name" : "Seyyit Khan: Bride of the Earth (Seyyit Han)", "movie_genre" : "Drama|Western", "production_year" : 1999, "budget" : 18749, "ip_address" : "238.37.82.1" }
+{ "_id" : ObjectId("619f13938530bf40b93c681a"), "id" : 24, "movie_name" : "Tom and Jerry: A Nutcracker Tale", "movie_genre" : "Animation|Comedy", "production_year" : 2020, "budget" : 17408, "ip_address" : "231.179.88.148" }
+Type "it" for more
+> db.movie.find({movie_name:{}})
+>
+> db.movie.find({movie_name:{$eq:"Last Chance"}},{movie_name:1,production_year:1})
+{ "_id" : ObjectId("619f13938530bf40b93c680a"), "movie_name" : "Last Chance", "production_year" : 1992 }
+> db.movie.find({movie_name:{$eq:"Last Chance"}},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c680a"),
+        "movie_name" : "Last Chance",
+        "production_year" : 1992
+}
+> db.movie.find({movie_name:{$neq:"Last Chance"}},{movie_name:1,production_year:1}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown operator: $neq",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.movie.find({movie_name:{$ne:"Last Chance"}},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c6807"),
+        "movie_name" : "Perfectly Normal",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6808"),
+        "movie_name" : "Dark Matter",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6809"),
+        "movie_name" : "The Boogens",
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680b"),
+        "movie_name" : "Love Don't Cost a Thing",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680c"),
+        "movie_name" : "When Pigs Have Wings",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680d"),
+        "movie_name" : "Trou, Le (Hole, The) (Night Watch, The)",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680e"),
+        "movie_name" : "Survive Style 5+",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680f"),
+        "movie_name" : "Dead Awake",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6810"),
+        "movie_name" : "Mike's New Car",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6811"),
+        "movie_name" : "Crawlspace",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6812"),
+        "movie_name" : "Lumihiutalemuodostelma",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6813"),
+        "movie_name" : "Loser",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6814"),
+        "movie_name" : "And Life Goes On (a.k.a. Life and Nothing More) (Zendegi va digar hich)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6815"),
+        "movie_name" : "Killer of Sheep",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6816"),
+        "movie_name" : "Warrior, The",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6817"),
+        "movie_name" : "Nibelungen: Kriemhild's Revenge, Die (Die Nibelungen: Kriemhilds Rache)",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6818"),
+        "movie_name" : "Endless Love",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6819"),
+        "movie_name" : "Seyyit Khan: Bride of the Earth (Seyyit Han)",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681a"),
+        "movie_name" : "Tom and Jerry: A Nutcracker Tale",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681b"),
+        "movie_name" : "The Package",
+        "production_year" : 2005
+}
+Type "it" for more
+> db.movie.find({budget:{$gt:15000}},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c6808"),
+        "movie_name" : "Dark Matter",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6809"),
+        "movie_name" : "The Boogens",
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680d"),
+        "movie_name" : "Trou, Le (Hole, The) (Night Watch, The)",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6813"),
+        "movie_name" : "Loser",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6814"),
+        "movie_name" : "And Life Goes On (a.k.a. Life and Nothing More) (Zendegi va digar hich)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6818"),
+        "movie_name" : "Endless Love",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6819"),
+        "movie_name" : "Seyyit Khan: Bride of the Earth (Seyyit Han)",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681a"),
+        "movie_name" : "Tom and Jerry: A Nutcracker Tale",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681d"),
+        "movie_name" : "Those Magnificent Men in Their Flying Machines",
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681f"),
+        "movie_name" : "Glen or Glenda",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6820"),
+        "movie_name" : "We Have a Pope (Habemus Papam)",
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6824"),
+        "movie_name" : "Wrecked",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6826"),
+        "movie_name" : "Whatever Works",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682a"),
+        "movie_name" : "Kumail Nanjiani: Beta Male ",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682c"),
+        "movie_name" : "Sister (L'enfant d'en haut)",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682e"),
+        "movie_name" : "Fool for Love",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682f"),
+        "movie_name" : "Man Who Quit Smoking, The (Mannen som slutade röka)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6830"),
+        "movie_name" : "Vacancy 2: The First Cut",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6831"),
+        "movie_name" : "Very Happy Alexander (Alexandre le bienheureux)",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6834"),
+        "movie_name" : "Reversal of Fortune",
+        "production_year" : 1994
+}
+Type "it" for more
+> db.movie.find({budget:{$gte:15000}},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c6808"),
+        "movie_name" : "Dark Matter",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6809"),
+        "movie_name" : "The Boogens",
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680d"),
+        "movie_name" : "Trou, Le (Hole, The) (Night Watch, The)",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6813"),
+        "movie_name" : "Loser",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6814"),
+        "movie_name" : "And Life Goes On (a.k.a. Life and Nothing More) (Zendegi va digar hich)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6818"),
+        "movie_name" : "Endless Love",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6819"),
+        "movie_name" : "Seyyit Khan: Bride of the Earth (Seyyit Han)",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681a"),
+        "movie_name" : "Tom and Jerry: A Nutcracker Tale",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681d"),
+        "movie_name" : "Those Magnificent Men in Their Flying Machines",
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681f"),
+        "movie_name" : "Glen or Glenda",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6820"),
+        "movie_name" : "We Have a Pope (Habemus Papam)",
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6824"),
+        "movie_name" : "Wrecked",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6826"),
+        "movie_name" : "Whatever Works",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682a"),
+        "movie_name" : "Kumail Nanjiani: Beta Male ",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682c"),
+        "movie_name" : "Sister (L'enfant d'en haut)",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682e"),
+        "movie_name" : "Fool for Love",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682f"),
+        "movie_name" : "Man Who Quit Smoking, The (Mannen som slutade röka)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6830"),
+        "movie_name" : "Vacancy 2: The First Cut",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6831"),
+        "movie_name" : "Very Happy Alexander (Alexandre le bienheureux)",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6834"),
+        "movie_name" : "Reversal of Fortune",
+        "production_year" : 1994
+}
+Type "it" for more
+> db.movie.find({budget:{$gt:15000}},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c6808"),
+        "movie_name" : "Dark Matter",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6809"),
+        "movie_name" : "The Boogens",
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680d"),
+        "movie_name" : "Trou, Le (Hole, The) (Night Watch, The)",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6813"),
+        "movie_name" : "Loser",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6814"),
+        "movie_name" : "And Life Goes On (a.k.a. Life and Nothing More) (Zendegi va digar hich)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6818"),
+        "movie_name" : "Endless Love",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6819"),
+        "movie_name" : "Seyyit Khan: Bride of the Earth (Seyyit Han)",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681a"),
+        "movie_name" : "Tom and Jerry: A Nutcracker Tale",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681d"),
+        "movie_name" : "Those Magnificent Men in Their Flying Machines",
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681f"),
+        "movie_name" : "Glen or Glenda",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6820"),
+        "movie_name" : "We Have a Pope (Habemus Papam)",
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6824"),
+        "movie_name" : "Wrecked",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6826"),
+        "movie_name" : "Whatever Works",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682a"),
+        "movie_name" : "Kumail Nanjiani: Beta Male ",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682c"),
+        "movie_name" : "Sister (L'enfant d'en haut)",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682e"),
+        "movie_name" : "Fool for Love",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682f"),
+        "movie_name" : "Man Who Quit Smoking, The (Mannen som slutade röka)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6830"),
+        "movie_name" : "Vacancy 2: The First Cut",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6831"),
+        "movie_name" : "Very Happy Alexander (Alexandre le bienheureux)",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6834"),
+        "movie_name" : "Reversal of Fortune",
+        "production_year" : 1994
+}
+Type "it" for more
+> db.movie.find({budget:{$lt:15000}},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c6807"),
+        "movie_name" : "Perfectly Normal",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680a"),
+        "movie_name" : "Last Chance",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680b"),
+        "movie_name" : "Love Don't Cost a Thing",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680c"),
+        "movie_name" : "When Pigs Have Wings",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680e"),
+        "movie_name" : "Survive Style 5+",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680f"),
+        "movie_name" : "Dead Awake",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6810"),
+        "movie_name" : "Mike's New Car",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6811"),
+        "movie_name" : "Crawlspace",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6812"),
+        "movie_name" : "Lumihiutalemuodostelma",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6815"),
+        "movie_name" : "Killer of Sheep",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6816"),
+        "movie_name" : "Warrior, The",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6817"),
+        "movie_name" : "Nibelungen: Kriemhild's Revenge, Die (Die Nibelungen: Kriemhilds Rache)",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681b"),
+        "movie_name" : "The Package",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681c"),
+        "movie_name" : "Open Water",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681e"),
+        "movie_name" : "Pinocchio and the Emperor of the Night",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6821"),
+        "movie_name" : "Alice in Wonderland",
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6822"),
+        "movie_name" : "Wrecked",
+        "production_year" : 1991
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6823"),
+        "movie_name" : "Cattle Queen of Montana",
+        "production_year" : 2012
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6825"),
+        "movie_name" : "Skellig",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6827"),
+        "movie_name" : "But Not for Me",
+        "production_year" : 1992
+}
+Type "it" for more
+> db.movie.find({budget:{$lte:15000}},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c6807"),
+        "movie_name" : "Perfectly Normal",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680a"),
+        "movie_name" : "Last Chance",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680b"),
+        "movie_name" : "Love Don't Cost a Thing",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680c"),
+        "movie_name" : "When Pigs Have Wings",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680e"),
+        "movie_name" : "Survive Style 5+",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680f"),
+        "movie_name" : "Dead Awake",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6810"),
+        "movie_name" : "Mike's New Car",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6811"),
+        "movie_name" : "Crawlspace",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6812"),
+        "movie_name" : "Lumihiutalemuodostelma",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6815"),
+        "movie_name" : "Killer of Sheep",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6816"),
+        "movie_name" : "Warrior, The",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6817"),
+        "movie_name" : "Nibelungen: Kriemhild's Revenge, Die (Die Nibelungen: Kriemhilds Rache)",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681b"),
+        "movie_name" : "The Package",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681c"),
+        "movie_name" : "Open Water",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681e"),
+        "movie_name" : "Pinocchio and the Emperor of the Night",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6821"),
+        "movie_name" : "Alice in Wonderland",
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6822"),
+        "movie_name" : "Wrecked",
+        "production_year" : 1991
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6823"),
+        "movie_name" : "Cattle Queen of Montana",
+        "production_year" : 2012
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6825"),
+        "movie_name" : "Skellig",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6827"),
+        "movie_name" : "But Not for Me",
+        "production_year" : 1992
+}
+Type "it" for more
+> db.movie.find({$and:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c6809"),
+        "movie_name" : "The Boogens",
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680b"),
+        "movie_name" : "Love Don't Cost a Thing",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680c"),
+        "movie_name" : "When Pigs Have Wings",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680d"),
+        "movie_name" : "Trou, Le (Hole, The) (Night Watch, The)",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680e"),
+        "movie_name" : "Survive Style 5+",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6810"),
+        "movie_name" : "Mike's New Car",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6813"),
+        "movie_name" : "Loser",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6814"),
+        "movie_name" : "And Life Goes On (a.k.a. Life and Nothing More) (Zendegi va digar hich)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6816"),
+        "movie_name" : "Warrior, The",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681a"),
+        "movie_name" : "Tom and Jerry: A Nutcracker Tale",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681b"),
+        "movie_name" : "The Package",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681d"),
+        "movie_name" : "Those Magnificent Men in Their Flying Machines",
+        "production_year" : 2013
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681f"),
+        "movie_name" : "Glen or Glenda",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6824"),
+        "movie_name" : "Wrecked",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6825"),
+        "movie_name" : "Skellig",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6826"),
+        "movie_name" : "Whatever Works",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6828"),
+        "movie_name" : "Man Who Shot Liberty Valance, The",
+        "production_year" : 2002
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682a"),
+        "movie_name" : "Kumail Nanjiani: Beta Male ",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682c"),
+        "movie_name" : "Sister (L'enfant d'en haut)",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682d"),
+        "movie_name" : "ATL",
+        "production_year" : 2001
+}
+Type "it" for more
+> db.movie.find({$or:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c6807"),
+        "movie_name" : "Perfectly Normal",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6808"),
+        "movie_name" : "Dark Matter",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6809"),
+        "movie_name" : "The Boogens",
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680a"),
+        "movie_name" : "Last Chance",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680b"),
+        "movie_name" : "Love Don't Cost a Thing",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680c"),
+        "movie_name" : "When Pigs Have Wings",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680d"),
+        "movie_name" : "Trou, Le (Hole, The) (Night Watch, The)",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680e"),
+        "movie_name" : "Survive Style 5+",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680f"),
+        "movie_name" : "Dead Awake",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6810"),
+        "movie_name" : "Mike's New Car",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6811"),
+        "movie_name" : "Crawlspace",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6812"),
+        "movie_name" : "Lumihiutalemuodostelma",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6813"),
+        "movie_name" : "Loser",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6814"),
+        "movie_name" : "And Life Goes On (a.k.a. Life and Nothing More) (Zendegi va digar hich)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6815"),
+        "movie_name" : "Killer of Sheep",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6816"),
+        "movie_name" : "Warrior, The",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6817"),
+        "movie_name" : "Nibelungen: Kriemhild's Revenge, Die (Die Nibelungen: Kriemhilds Rache)",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6818"),
+        "movie_name" : "Endless Love",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6819"),
+        "movie_name" : "Seyyit Khan: Bride of the Earth (Seyyit Han)",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681a"),
+        "movie_name" : "Tom and Jerry: A Nutcracker Tale",
+        "production_year" : 2020
+}
+Type "it" for more
+> db.movie.find({$nor:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c6827"),
+        "movie_name" : "But Not for Me",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6829"),
+        "movie_name" : "Love at Large",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6833"),
+        "movie_name" : "'Hellboy': The Seeds of Creation",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c684a"),
+        "movie_name" : "Antique (Sayangkoldong yangkwajajeom aentikeu)",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c689a"),
+        "movie_name" : "Chinese Zodiac (Armour of God III) (CZ12)",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c68b7"),
+        "movie_name" : "Leif",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6956"),
+        "movie_name" : "$ellebrity (Sellebrity)",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6972"),
+        "movie_name" : "Eleventh Year, The (Odinnadtsatyy) ",
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6977"),
+        "movie_name" : "Addams Family Values",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6988"),
+        "movie_name" : "Naked Souls",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c69ec"),
+        "movie_name" : "I Knew It Was You: Rediscovering John Cazale",
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6a5d"),
+        "movie_name" : "Wanda Nevada",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6a6f"),
+        "movie_name" : "Times Square",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6ab3"),
+        "movie_name" : "Saving Shiloh",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6ae4"),
+        "movie_name" : "Lesson in Love, A (En lektion i kärlek)",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6ae9"),
+        "movie_name" : "Mississippi Masala",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6aec"),
+        "movie_name" : "In the Hands of the Gods",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6af1"),
+        "movie_name" : "The Story of Asya Klyachina",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6b05"),
+        "movie_name" : "Resident Evil: Afterlife",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6b12"),
+        "movie_name" : "Life with Mikey",
+        "production_year" : 1993
+}
+Type "it" for more
+> db.movie.find({$or:[{production_year:{$ne:2000}},{budget:{$ne:10000}}]},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c6807"),
+        "movie_name" : "Perfectly Normal",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6808"),
+        "movie_name" : "Dark Matter",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6809"),
+        "movie_name" : "The Boogens",
+        "production_year" : 2017
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680a"),
+        "movie_name" : "Last Chance",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680b"),
+        "movie_name" : "Love Don't Cost a Thing",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680c"),
+        "movie_name" : "When Pigs Have Wings",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680d"),
+        "movie_name" : "Trou, Le (Hole, The) (Night Watch, The)",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680e"),
+        "movie_name" : "Survive Style 5+",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680f"),
+        "movie_name" : "Dead Awake",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6810"),
+        "movie_name" : "Mike's New Car",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6811"),
+        "movie_name" : "Crawlspace",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6812"),
+        "movie_name" : "Lumihiutalemuodostelma",
+        "production_year" : 1997
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6813"),
+        "movie_name" : "Loser",
+        "production_year" : 2019
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6814"),
+        "movie_name" : "And Life Goes On (a.k.a. Life and Nothing More) (Zendegi va digar hich)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6815"),
+        "movie_name" : "Killer of Sheep",
+        "production_year" : 1995
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6816"),
+        "movie_name" : "Warrior, The",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6817"),
+        "movie_name" : "Nibelungen: Kriemhild's Revenge, Die (Die Nibelungen: Kriemhilds Rache)",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6818"),
+        "movie_name" : "Endless Love",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6819"),
+        "movie_name" : "Seyyit Khan: Bride of the Earth (Seyyit Han)",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681a"),
+        "movie_name" : "Tom and Jerry: A Nutcracker Tale",
+        "production_year" : 2020
+}
+Type "it" for more
+> db.movie.find({$and:[{production_year:{$gte:2000}},{production_year:{$lte:2010}}]},{movie_name:1,production_year:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c680b"),
+        "movie_name" : "Love Don't Cost a Thing",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c680d"),
+        "movie_name" : "Trou, Le (Hole, The) (Night Watch, The)",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6810"),
+        "movie_name" : "Mike's New Car",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6811"),
+        "movie_name" : "Crawlspace",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6814"),
+        "movie_name" : "And Life Goes On (a.k.a. Life and Nothing More) (Zendegi va digar hich)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6816"),
+        "movie_name" : "Warrior, The",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681b"),
+        "movie_name" : "The Package",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6825"),
+        "movie_name" : "Skellig",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6826"),
+        "movie_name" : "Whatever Works",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6828"),
+        "movie_name" : "Man Who Shot Liberty Valance, The",
+        "production_year" : 2002
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682a"),
+        "movie_name" : "Kumail Nanjiani: Beta Male ",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682d"),
+        "movie_name" : "ATL",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c682f"),
+        "movie_name" : "Man Who Quit Smoking, The (Mannen som slutade röka)",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6830"),
+        "movie_name" : "Vacancy 2: The First Cut",
+        "production_year" : 2009
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6831"),
+        "movie_name" : "Very Happy Alexander (Alexandre le bienheureux)",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6836"),
+        "movie_name" : "Martin & Orloff",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6837"),
+        "movie_name" : "Double Suicide (Shinjû: Ten no amijima)",
+        "production_year" : 2007
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6838"),
+        "movie_name" : "Beyond the Black Rainbow",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c683a"),
+        "movie_name" : "The Burglar",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c683d"),
+        "movie_name" : "SuperBabies: Baby Geniuses 2",
+        "production_year" : 2002
+}
+Type "it" for more
+> db.movie.find({},{movie_name:1,production_year:1}).sort({production_year:-1,movie_name:1}).pretty()
+{
+        "_id" : ObjectId("619f13938530bf40b93c6844"),
+        "movie_name" : "B. Monkey",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6acc"),
+        "movie_name" : "BBOY for LIFE",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6b5a"),
+        "movie_name" : "Ciao Bella",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6854"),
+        "movie_name" : "Dalton, Les",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6861"),
+        "movie_name" : "Deadline",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6b9f"),
+        "movie_name" : "Die Hard",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6b11"),
+        "movie_name" : "Doctor at Sea",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6aa4"),
+        "movie_name" : "Ed",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6a8a"),
+        "movie_name" : "Edmond",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6846"),
+        "movie_name" : "Everybody Dies But Me",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6950"),
+        "movie_name" : "Frankenstein Syndrome, The",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c690c"),
+        "movie_name" : "Frankie and Alice",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c681f"),
+        "movie_name" : "Glen or Glenda",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c68dd"),
+        "movie_name" : "Harder They Come, The",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6912"),
+        "movie_name" : "Haunting, The",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6872"),
+        "movie_name" : "Hocus Pocus",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6ad4"),
+        "movie_name" : "Killing Me Softly",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6925"),
+        "movie_name" : "Morning After, The",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6ad5"),
+        "movie_name" : "Nude Bomb, The",
+        "production_year" : 2020
+}
+{
+        "_id" : ObjectId("619f13938530bf40b93c6a2c"),
+        "movie_name" : "On Top of the Whale (Het dak van de Walvis)",
+        "production_year" : 2020
+}
+Type "it" for more
+> db.movie.find({},{movie_name:1,production_year:1}).sort({production_year:-1,movie_name:1}).skip(20).limit(5)
+{ "_id" : ObjectId("619f13938530bf40b93c687f"), "movie_name" : "Red Corner", "production_year" : 2020 }
+{ "_id" : ObjectId("619f13938530bf40b93c6a2d"), "movie_name" : "Ringu (Ring)", "production_year" : 2020 }
+{ "_id" : ObjectId("619f13938530bf40b93c692c"), "movie_name" : "Runaway", "production_year" : 2020 }
+{ "_id" : ObjectId("619f13938530bf40b93c682c"), "movie_name" : "Sister (L'enfant d'en haut)", "production_year" : 2020 }
+{ "_id" : ObjectId("619f13938530bf40b93c68da"), "movie_name" : "Sorcerer", "production_year" : 2020 }
+> db.movie.find({},{movie_name:1,production_year:1}).sort({production_year:-1,movie_name:1}).limit(10).update({},{$unset:{movie_genre:1}})
+uncaught exception: TypeError: db.movie.find(...).sort(...).limit(...).update is not a function :
+@(shell):1:1
+>

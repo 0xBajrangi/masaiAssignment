@@ -144,13 +144,64 @@ app.post("/checkout", async (req, res) => {
 
 // get books that are checked output
 app.get('/book/checkout', async (req, res) => {
-   
-    const book = await Book.find({ checkout_ids:"true"}).populate("author_ids").populate("section_ids").populate("checkout_ids").lean().exec();
+    const checkout = await Checkout.find({ status: "false" });
+    console.log(checkout);
+    const book = await Book.find({checkout_ids:checkout[0]._id}).populate("checkout_ids").lean().exec();
+
+    
    
  
     return res.send(book);
     
 });
+
+// all books written by a author are
+app.get('/book/author/:author', async (req, res) => {
+    const aut = await Author.find({ first_name:req.params.author });
+      console.log(aut)
+    const book = await Book.find({author_ids:aut[0]._id}).populate("author_ids").lean().exec();
+    return res.send(book);
+    
+});
+
+//find a book in a section 
+
+app.get('/book/section/:section', async (req, res) => {
+    const aut = await Section.find({ first_name:req.params.section });
+      console.log(aut)
+    const book = await Book.find({section_ids:aut[0]._id}).populate("section_ids").lean().exec();
+    return res.send(book);
+    
+});
+
+
+// find book in a section which are not check out
+
+app.get('/book/checkout/:section', async (req, res) => {
+     const aut = await Section.find({ first_name: req.params.section });
+     const checkout = await Checkout.find({ status: "false" });
+      console.log(aut)
+    const book = await Book.find({ $and: [{section_ids:aut[0]._id},{checkout_ids:checkout[0]._id}] })
+        .populate("section_ids")
+        .populate("checkout_ids")
+        .lean()
+        .exec();
+    return res.send(book);
+        
+})
+
+
+//find book of one author inside a seciton
+app.get('/book/author/section/:author/:section', async (req, res) => {
+    const aut = await Author.find({ first_name: req.params.author });
+     const sec = await Section.find({ first_name: req.params.section });
+    
+      
+    const book = await Book.find({ $and: [{section_ids:sec[0]._id},{author_ids:aut[0]._id}] }).populate("author_ids").populate("section_ids").lean().exec();
+    return res.send(book);
+    
+});
+
 
 
 

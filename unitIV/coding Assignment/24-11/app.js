@@ -144,7 +144,7 @@ app.post("/checkout", async (req, res) => {
 
 // get books that are checked output
 app.get('/book/checkout', async (req, res) => {
-    const checkout = await Checkout.find({ status: "false" });
+    const checkout = await Checkout.find({ status: "true" });
     console.log(checkout);
     const book = await Book.find({checkout_ids:checkout[0]._id}).populate("checkout_ids").lean().exec();
 

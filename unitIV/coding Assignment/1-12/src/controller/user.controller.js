@@ -55,7 +55,7 @@ router.delete('/user/:id', async (req, res) => {
         let user = await User.findByIdAndDelete(req.params.id);
         fs.unlink(user.profile_pic, (err) => {
             if (err) {
-                throw errl;
+                throw err;
             }
             console.log("file deleted");
         })

@@ -13,6 +13,7 @@ app.use(express.json());
 app.use("/post", prodControler);
 app.post("/register", register);
 app.post("/login", login);
+app.use(passport.initialize())
 
 // github
 
@@ -23,7 +24,7 @@ app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/');
+   res.send({user:req.user})
   });
 
 module.exports = app;
